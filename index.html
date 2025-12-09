@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 PJ Lages de Pedra —  Virada 2025-2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pj-verde: #D3241B;
+            --pj-verde-claro: #D3241B;
+            --pj-verde-suave: #E8F5E9;
+            --pj-dourado: #FFD700;
+            --pj-branco: #FFFFFF;
+            --pj-cinza: #F5F5F5;
+            --pj-cinza-escuro: #424242;
+            --pj-texto: #212121;
+            --pj-borda: #C8E6C9;
+            --shadow: 0 2px 8px rgba(46, 125, 50, 0.1);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--pj-cinza);
+            color: var(--pj-texto);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Oficial PJ */
+        .header-pj {
+            background: var(--pj-verde);
+            color: var(--pj-branco);
+            padding: 20px 0;
+            border-bottom: 4px solid var(--pj-dourado);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+        }
+
+        .header-content {
+            text-align: center;
+        }
+
+        .logo-pj {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .logo-pj i {
+            font-size: 2rem;
+            color: var(--pj-dourado);
+        }
+
+        .logo-pj h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            background: var(--pj-branco);
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: var(--radius);
+            border-left: 5px solid var(--pj-verde);
+            box-shadow: var(--shadow);
+        }
+
+        .welcome-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            color: var(--pj-verde);
+        }
+
+        .welcome-title i {
+            font-size: 1.5rem;
+        }
+
+        .focus-points {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .focus-points {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .focus-point {
+            text-align: center;
+            padding: 15px;
+            background: var(--pj-verde-suave);
+            border-radius: 8px;
+            font-weight: 600;
+            color: var(--pj-verde);
+        }
+
+        /* Sections */
+        .section-pj {
+            background: var(--pj-branco);
+            margin: 25px 0;
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-top: 3px solid var(--pj-verde);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--pj-borda);
+            color: var(--pj-verde);
+        }
+
+        .section-header i {
+            font-size: 1.4rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        /* Timeline Cronograma */
+        .timeline-pj {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline-pj::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--pj-verde);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: var(--pj-verde-suave);
+            border-radius: 8px;
+            border-left: 4px solid var(--pj-verde-claro);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 24px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--pj-branco);
+            border: 3px solid var(--pj-verde);
+        }
+
+        .timeline-time {
+            font-weight: 700;
+            color: var(--pj-verde);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .timeline-details {
+            margin-top: 10px;
+        }
+
+        .timeline-subitem {
+            margin: 8px 0;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .timeline-subitem::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--pj-verde);
+            font-weight: bold;
+        }
+
+        /* Etapas */
+        .etapas-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .etapas-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .etapa {
+            padding: 20px;
+            background: var(--pj-verde-suave);
+            border-radius: var(--radius);
+            border: 1px solid var(--pj-borda);
+        }
+
+        .etapa h3 {
+            color: var(--pj-verde);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .etapa-list {
+            list-style: none;
+        }
+
+        .etapa-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--pj-borda);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .etapa-list li:last-child {
+            border-bottom: none;
+        }
+
+        .etapa-list li i {
+            color: var(--pj-verde);
+            margin-top: 3px;
+            font-size: 0.9rem;
+        }
+
+        /* Materiais */
+        .materiais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .material-item {
+            padding: 15px;
+            background: var(--pj-verde-suave);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid var(--pj-borda);
+        }
+
+        .material-item i {
+            color: var(--pj-verde);
+        }
+
+        /* Responsáveis */
+        .responsaveis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .responsavel-item {
+            padding: 15px;
+            background: var(--pj-verde-suave);
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--pj-borda);
+            transition: var(--transition);
+        }
+
+        .responsavel-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
+        }
+
+        .responsavel-item i {
+            font-size: 1.5rem;
+            color: var(--pj-verde);
+            margin-bottom: 10px;
+        }
+
+        /* Pendências */
+        .pendencias-list {
+            background: #FFF3E0;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 5px solid #FF9800;
+        }
+
+        .pendencias-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #FFCC80;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .pendencias-list li:last-child {
+            border-bottom: none;
+        }
+
+        .pendencias-list li i {
+            color: #FF9800;
+            margin-top: 3px;
+        }
+
+        /* Footer */
+        .footer-pj {
+            background: var(--pj-verde);
+            color: var(--pj-branco);
+            padding: 30px 0;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            opacity: 0.9;
+        }
+
+        .footer-item i {
+            color: var(--pj-dourado);
+        }
+
+        .update-info {
+            font-size: 0.9rem;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .section-pj {
+                padding: 20px;
+            }
+            
+            .materiais-grid,
+            .responsaveis-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .focus-points {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .materiais-grid,
+            .responsaveis-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo-pj h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Oficial PJ -->
+    <header class="header-pj"  >
+        <div style="display: flex; align-items: center; justify-content: center;" >
+            <img src="https://pj.org.br/wp-content/uploads/2024/05/cropped-PJ4-2.png" style="width:50% ;" alt="">
+        </div>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-pj">
+                    <i class="fas fa-cross"></i>
+                    <h1>PJ Lages de Pedra</h1>
+                </div>
+                <div class="subtitle">🌟 Painel da Virada 2025</div>
+                <div class="tagline">
+                    <i class="fas fa-users"></i> Coordenação • Organização Interna • Atualizações em Tempo Real
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Welcome Section -->
+    <div class="container">
+        <section class="welcome-section">
+            <div class="welcome-title">
+                <i class="fas fa-dove"></i>
+                <h2>🕊️ Bem-vindos ao Painel Oficial da Virada</h2>
+            </div>
+            <p>Este site reúne tudo o que a coordenação precisa para conduzir o evento da Virada com clareza, unidade e leveza. Aqui você acompanha o cronograma, as tarefas, os responsáveis, os materiais e o andamento das preparações.</p>
+            
+            <div class="focus-points">
+                <div class="focus-point">✔️ Organização</div>
+                <div class="focus-point">✔️ Espiritualidade</div>
+                <div class="focus-point">✔️ Dinâmica jovem</div>
+                <div class="focus-point">✔️ Zero correria</div>
+            </div>
+        </section>
+
+        <!-- Cronograma -->
+        <section class="section-pj">
+            <div class="section-header">
+                <i class="fas fa-calendar-alt"></i>
+                <h2>📅 Cronograma Geral do Evento</h2>
+            </div>
+            <p style="margin-bottom: 20px; font-style: italic; color: #666;">(Versão Preliminar - detalhes finais serão definidos no encontro de 21/12)</p>
+            
+            <div class="timeline-pj">
+                <!-- Timeline items serão inseridos via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Etapas de Preparação -->
+        <section class="section-pj">
+            <div class="section-header">
+                <i class="fas fa-tasks"></i>    
+                <h2>🧭 Etapas de Preparação</h2>
+            </div>
+            <p style="margin-bottom: 20px;">Acompanhe o que falta, o que já foi feito e o que vamos revisar no encontro.</p>
+            
+            <div class="etapas-container">
+                <!-- Etapas serão inseridas via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Materiais -->
+        <section class="section-pj">
+            <div class="section-header">
+                <i class="fas fa-clipboard-list"></i>
+                <h2>🧺 Lista Geral de Materiais</h2>
+            </div>
+            <p style="margin-bottom: 20px;">(para preparar antes do encontro)</p>
+            
+            <div class="materiais-grid">
+                <!-- Materiais serão inseridos via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Responsáveis -->
+        <section class="section-pj">
+            <div class="section-header">
+                <i class="fas fa-user-friends"></i>
+                <h2>👥 Responsáveis do Evento</h2>
+            </div>
+            <p style="margin-bottom: 20px;">(a ser definido no encontro)</p>
+            
+            <div class="responsaveis-grid">
+                <!-- Responsáveis serão inseridos via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Pendências -->
+        <section class="section-pj">
+            <div class="section-header">
+                <i class="fas fa-question-circle"></i>
+                <h2>❓ Decisões Pendentes (para o dia 21/12)</h2>
+            </div>
+            
+            <ul class="pendencias-list">
+                <!-- Pendências serão inseridas via JavaScript -->
+            </ul>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-pj">
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-item">
+                    <i class="fas fa-calendar-day"></i>
+                    <span>Próximo encontro: 21 de Dezembro</span>
+                </div>
+                <div class="footer-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Local: Igreja Matriz - Lages de Pedra</span>
+                </div>
+                <div class="footer-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Horário: 31/12 - 21:00 até 01/01 - 02:00</span>
+                </div>
+            </div>
+            
+            <div class="update-info">
+                <i class="fas fa-sync-alt"></i> Última atualização: <span id="current-date"></span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dados do Cronograma
+        const cronograma = [
+            {
+                hora: "21h30 — Abertura",
+                descricao: "Início oficial da Virada",
+                detalhes: [
+                    "Recepção e acolhida",
+                    "Palavra que representa o ano",
+                    "Oração rápida",
+                    "Formação dos times: Estrela ✨ e Luz 🌟"
+                ]
+            },
+            {
+                hora: "21h40 — Corrida do Ovo Missionário",
+                descricao: "Dinâmica com desafio físico e conhecimento bíblico",
+                detalhes: [
+                    "Corrida do ovo",
+                    "Perguntas bíblicas simples"
+                ]
+            },
+            {
+                hora: "21h55 — Dança das Tribos",
+                descricao: "Dança em roda com eliminação",
+                detalhes: [
+                    "Dança em roda",
+                    "Sentou por último, sai"
+                ]
+            },
+            {
+                hora: "22h05 — Cabo de Guerra dos Profetas",
+                descricao: "Competição em equipe",
+                detalhes: [
+                    "Masculino",
+                    "Feminino",
+                    "Torcida valendo ponto (opcional)"
+                ]
+            },
+            {
+                hora: "22h20 — Oficina Relâmpago",
+                descricao: "Imitação Gospel",
+                detalhes: [
+                    "Imitar ministro de música",
+                    "Imitar profeta da Bíblia",
+                    "Imitar pregador carismático",
+                    "Votação dos mais engraçados"
+                ]
+            },
+            {
+                hora: "22h35 — Quiz Passa ou Repassa",
+                descricao: "Perguntas rápidas com balões surpresa",
+                detalhes: [
+                    "Perguntas rápidas",
+                    "Balões com surpresas: +1 / –1 / troca de time / indicar alguém"
+                ]
+            },
+            {
+                hora: "22h50 — Pausa + Roda Engraçada",
+                descricao: "Momento de descontração",
+                detalhes: [
+                    "Compartilhar o momento mais engraçado do ano"
+                ]
+            },
+            {
+                hora: "23h00 — Gincana Final",
+                descricao: "Desafio 10 Segundos",
+                detalhes: [
+                    "Listar 3 personagens bíblicos",
+                    "Pose contagiante",
+                    "Dizer 5 livros da Bíblia correndo",
+                    "Criar grito de guerra",
+                    "Encenação rápida (Jonas no peixe, etc.)",
+                    "Segurar garrafa com o cotovelo",
+                    "Andar como animal bíblico",
+                    "Imitações simples",
+                    "Desafios surpresa"
+                ]
+            },
+            {
+                hora: "23h35 — Momento de Luz",
+                descricao: "Reflexão espiritual",
+                detalhes: [
+                    "O que deixar pra trás",
+                    "O que viver no novo ano",
+                    "Oração + Pai-Nosso"
+                ]
+            },
+            {
+                hora: "23h45 — Contagem Regressiva + Foto",
+                descricao: "Celebração final",
+                detalhes: [
+                    "Foto geral de branco",
+                    "Feliz Ano Novo ✨"
+                ]
+            }
+        ];
+
+        // Dados das Etapas
+        const etapas = [
+            {
+                titulo: "1) Planejamento Estratégico",
+                icon: "fas fa-clipboard-check",
+                itens: [
+                    "Tema oficial da Virada",
+                    "Aprovação do roteiro",
+                    "Definição dos responsáveis",
+                    "Enquetes para validar ideias",
+                    "Materiais necessários",
+                    "Mensagem-base para WhatsApp",
+                    "Arte preliminar da programação"
+                ]
+            },
+            {
+                titulo: "2) Produção e Organização",
+                icon: "fas fa-tools",
+                itens: [
+                    "Comprar/pegar materiais",
+                    "Preparar perguntas e desafios",
+                    "Criar balões-surpresa",
+                    "Separar ovos, corda, papeis, etc.",
+                    "Criar playlist oficial",
+                    "Ensaiar abertura e Momento de Luz",
+                    "Organizar som, foto e recepção",
+                    "Montar tabela de pontuação",
+                    "Arte final da programação"
+                ]
+            },
+            {
+                titulo: "3) Execução do Dia 31",
+                icon: "fas fa-play-circle",
+                itens: [
+                    "Manhã: Conferir materiais, testar som",
+                    "Tarde: Montagem do espaço, balões",
+                    "Noite: Seguir cronograma, registrar fotos"
+                ]
+            }
+        ];
+
+        // Dados dos Materiais
+        const materiais = [
+            { nome: "Ovos para corrida", icon: "fas fa-egg" },
+            { nome: "Corda (cabo de guerra)", icon: "fas fa-rope" },
+            { nome: "Balões", icon: "fas fa-balloon" },
+            { nome: "Papéis e canetas", icon: "fas fa-pen" },
+            { nome: "Caixa de som", icon: "fas fa-volume-up" },
+            { nome: "Extensões", icon: "fas fa-plug" },
+            { nome: "Mensagens impressas", icon: "fas fa-file-alt" },
+            { nome: "Água", icon: "fas fa-tint" },
+            { nome: "Prêmios simples", icon: "fas fa-gift" },
+            { nome: "Plaquinhas de pontuação", icon: "fas fa-chart-line" }
+        ];
+
+        // Dados dos Responsáveis
+        const responsaveis = [
+            { nome: "Condução geral", icon: "fas fa-user-tie" },
+            { nome: "Oração inicial", icon: "fas fa-pray" },
+            { nome: "Gincanas", icon: "fas fa-gamepad" },
+            { nome: "Som e música", icon: "fas fa-music" },
+            { nome: "Fotos e vídeos", icon: "fas fa-camera" },
+            { nome: "Recepção", icon: "fas fa-door-open" },
+            { nome: "Cronometragem", icon: "fas fa-stopwatch" },
+            { nome: "Organização do espaço", icon: "fas fa-th-large" },
+            { nome: "Equipe de apoio", icon: "fas fa-hands-helping" }
+        ];
+
+        // Dados das Pendências
+        const pendencias = [
+            "Cores oficiais do evento",
+            "Arte final da programação",
+            "Responsáveis de cada dinâmica",
+            "Materiais faltantes",
+            "Ajustes no cronograma",
+            "Divisão final dos times",
+            "Música do Momento de Luz",
+            "Frase do encerramento"
+        ];
+
+        // Função para renderizar cronograma
+        function renderCronograma() {
+            const container = document.querySelector('.timeline-pj');
+            container.innerHTML = '';
+            
+            cronograma.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'timeline-item';
+                
+                let detalhesHTML = '';
+                if (item.detalhes && item.detalhes.length > 0) {
+                    detalhesHTML = `
+                        <div class="timeline-details">
+                            ${item.detalhes.map(d => `
+                                <div class="timeline-subitem">${d}</div>
+                            `).join('')}
+                        </div>
+                    `;
+                }
+                
+                div.innerHTML = `
+                    <div class="timeline-time">
+                        <i class="far fa-clock"></i> ${item.hora}
+                    </div>
+                    <div><strong>${item.descricao}</strong></div>
+                    ${detalhesHTML}
+                `;
+                
+                container.appendChild(div);
+            });
+        }
+
+        // Função para renderizar etapas
+        function renderEtapas() {
+            const container = document.querySelector('.etapas-container');
+            container.innerHTML = '';
+            
+            etapas.forEach(etapa => {
+                const div = document.createElement('div');
+                div.className = 'etapa';
+                
+                div.innerHTML = `
+                    <h3><i class="${etapa.icon}"></i> ${etapa.titulo}</h3>
+                    <ul class="etapa-list">
+                        ${etapa.itens.map(item => `
+                            <li><i class="fa-regular fa-circle"></i> ${item}</li>
+                        `).join('')}
+                    </ul>
+                `;
+                
+                container.appendChild(div);
+            });
+        }
+
+        // Função para renderizar materiais
+        function renderMateriais() {
+            const container = document.querySelector('.materiais-grid');
+            container.innerHTML = '';
+            
+            materiais.forEach(material => {
+                const div = document.createElement('div');
+                div.className = 'material-item';
+                
+                div.innerHTML = `
+                    <i class="${material.icon}"></i>
+                    <span>${material.nome}</span>
+                `;
+                
+                container.appendChild(div);
+            });
+        }
+
+        // Função para renderizar responsáveis
+        function renderResponsaveis() {
+            const container = document.querySelector('.responsaveis-grid');
+            container.innerHTML = '';
+            
+            responsaveis.forEach(resp => {
+                const div = document.createElement('div');
+                div.className = 'responsavel-item';
+                
+                div.innerHTML = `
+                    <i class="${resp.icon}"></i>
+                    <div>${resp.nome}</div>
+                `;
+                
+                container.appendChild(div);
+            });
+        }
+
+        // Função para renderizar pendências
+        function renderPendencias() {
+            const container = document.querySelector('.pendencias-list');
+            container.innerHTML = '';
+            
+            pendencias.forEach(pendencia => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <i class="fas fa-circle-notch"></i>
+                    <span>${pendencia}</span>
+                `;
+                container.appendChild(li);
+            });
+        }
+
+        // Inicializar tudo quando a página carregar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Data atual
+            const now = new Date();
+            const options = { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+            document.getElementById('current-date').textContent = now.toLocaleDateString('pt-BR', options) + ' ' + now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+            
+            // Renderizar todos os componentes
+            renderCronograma();
+            renderEtapas();
+            renderMateriais();
+            renderResponsaveis();
+            renderPendencias();
+            
+            // Efeito de entrada suave
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+            
+            // Observador para animações de entrada
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            // Observar todas as seções
+            document.querySelectorAll('.section-pj').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
