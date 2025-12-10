@@ -19,7 +19,7 @@
             --pj-borda: #C8E6C9;
             --shadow: 0 2px 8px rgba(46, 125, 50, 0.1);
             --radius: 12px;
-            --transition: all 0.4s ease;
+            --transition: all 0.3s ease;
         }
 
         * {
@@ -28,16 +28,11 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: 'Inter', sans-serif;
             background: var(--pj-cinza);
             color: var(--pj-texto);
             line-height: 1.6;
-            padding-top: 0;
         }
 
         .container {
@@ -47,28 +42,13 @@
             padding: 0 20px;
         }
 
-        /* Header Oficial PJ - Versão corrigida */
+        /* Header simples sem firula */
         .header-pj {
             background: var(--pj-verde);
             color: var(--pj-branco);
-            padding: 15px 0;
+            padding: 20px 0;
             border-bottom: 4px solid var(--pj-dourado);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
             box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
-            transition: var(--transition);
-            transform: translateY(0);
-        }
-
-        .header-pj.hidden {
-            transform: translateY(-100%);
-        }
-
-        .header-pj.visible {
-            transform: translateY(0);
         }
 
         .header-content {
@@ -80,50 +60,40 @@
             align-items: center;
             justify-content: center;
             gap: 15px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         .logo-pj i {
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: var(--pj-dourado);
         }
 
         .logo-pj h1 {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 700;
             letter-spacing: -0.5px;
         }
 
         .subtitle {
-            font-size: 0.9rem;
+            font-size: 1rem;
             opacity: 0.9;
             margin-bottom: 5px;
         }
 
         .tagline {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             background: rgba(255, 255, 255, 0.15);
-            padding: 6px 12px;
+            padding: 8px 15px;
             border-radius: 20px;
             display: inline-block;
-            margin-top: 8px;
+            margin-top: 10px;
             font-weight: 500;
-        }
-
-        /* Espaço reservado para o header */
-        .header-spacer {
-            height: 140px;
-            transition: height 0.4s ease;
-        }
-
-        .header-spacer.compact {
-            height: 40px;
         }
 
         /* Welcome Section */
         .welcome-section {
             background: var(--pj-branco);
-            margin: 20px 0 30px 0;
+            margin: 30px 0;
             padding: 30px;
             border-radius: var(--radius);
             border-left: 5px solid var(--pj-verde);
@@ -178,14 +148,6 @@
             border-radius: var(--radius);
             box-shadow: var(--shadow);
             border-top: 3px solid var(--pj-verde);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .section-pj.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         .section-header {
@@ -475,91 +437,15 @@
             opacity: 0.8;
         }
 
-        /* Botão para mostrar header */
-        .show-header-btn {
-            position: fixed;
-            top: 15px;
-            right: 15px;
-            background: var(--pj-verde);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 999;
-            opacity: 0;
-            transform: translateY(-20px);
-            transition: var(--transition);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-
-        .show-header-btn.visible {
-            opacity: 0.9;
-            transform: translateY(0);
-        }
-
-        .show-header-btn:hover {
-            background: var(--pj-verde-claro);
-            transform: scale(1.1);
-            opacity: 1;
-        }
-
-        /* Barra de rolagem */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--pj-cinza);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--pj-verde);
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--pj-verde-claro);
-        }
-
         /* Responsividade */
         @media (max-width: 768px) {
             .container {
                 padding: 0 15px;
             }
             
-            .header-spacer {
-                height: 130px;
-            }
-            
-            .header-spacer.compact {
-                height: 35px;
-            }
-            
-            .header-pj {
-                padding: 12px 0;
-            }
-            
-            .logo-pj h1 {
-                font-size: 1.4rem;
-            }
-            
-            .subtitle {
-                font-size: 0.85rem;
-            }
-            
-            .tagline {
-                font-size: 0.8rem;
-                padding: 5px 10px;
-            }
-            
             .section-pj {
                 padding: 20px;
-                margin: 15px 0;
+                margin: 20px 0;
             }
             
             .materiais-grid,
@@ -571,23 +457,25 @@
                 grid-template-columns: 1fr;
             }
             
-            .show-header-btn {
-                top: 10px;
-                right: 10px;
-                width: 35px;
-                height: 35px;
+            .header-pj {
+                padding: 15px 0;
+            }
+            
+            .logo-pj h1 {
+                font-size: 1.5rem;
+            }
+            
+            .subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .tagline {
+                font-size: 0.8rem;
+                padding: 6px 12px;
             }
         }
 
         @media (max-width: 480px) {
-            .header-spacer {
-                height: 120px;
-            }
-            
-            .header-spacer.compact {
-                height: 30px;
-            }
-            
             .materiais-grid,
             .responsaveis-grid {
                 grid-template-columns: 1fr;
@@ -614,11 +502,34 @@
                 left: -25px;
             }
         }
+
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Barra de rolagem bonitinha */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--pj-cinza);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--pj-verde);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--pj-verde-claro);
+        }
     </style>
 </head>
 <body>
-    <!-- Header Oficial PJ -->
-    <header class="header-pj visible">
+    <!-- Header simples -->
+    <header class="header-pj">
         <div style="display: flex; align-items: center; justify-content: center;">
             <img src="https://pj.org.br/wp-content/uploads/2024/05/cropped-PJ4-2.png" style="width:50%; max-width: 300px;" alt="Logo PJ">
         </div>
@@ -635,14 +546,6 @@
             </div>
         </div>
     </header>
-
-    <!-- Espaço reservado para o header -->
-    <div class="header-spacer" id="headerSpacer"></div>
-
-    <!-- Botão para mostrar header quando oculto -->
-    <button class="show-header-btn" id="showHeaderBtn" title="Mostrar cabeçalho">
-        <i class="fas fa-chevron-down"></i>
-    </button>
 
     <!-- Conteúdo principal -->
     <div class="container">
@@ -928,66 +831,6 @@
             "Frase do encerramento"
         ];
 
-        // Variáveis para controle do scroll
-        let lastScrollTop = 0;
-        let isHeaderHidden = false;
-        const header = document.querySelector('.header-pj');
-        const headerSpacer = document.getElementById('headerSpacer');
-        const showHeaderBtn = document.getElementById('showHeaderBtn');
-        const sections = document.querySelectorAll('.section-pj');
-
-        // Função para esconder/mostrar header baseado no scroll
-        function handleScroll() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const scrollThreshold = 100; // Quantidade de scroll antes de esconder
-            
-            // Se estiver rolando para baixo e passou do threshold
-            if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
-                if (!isHeaderHidden) {
-                    hideHeader();
-                }
-            } 
-            // Se estiver rolando para cima
-            else if (scrollTop < lastScrollTop) {
-                if (isHeaderHidden) {
-                    showHeader();
-                }
-            }
-            
-            lastScrollTop = scrollTop;
-        }
-
-        function hideHeader() {
-            header.classList.remove('visible');
-            header.classList.add('hidden');
-            headerSpacer.classList.add('compact');
-            isHeaderHidden = true;
-            
-            // Mostrar botão após um delay
-            setTimeout(() => {
-                showHeaderBtn.classList.add('visible');
-            }, 300);
-        }
-
-        function showHeader() {
-            header.classList.remove('hidden');
-            header.classList.add('visible');
-            headerSpacer.classList.remove('compact');
-            isHeaderHidden = false;
-            showHeaderBtn.classList.remove('visible');
-        }
-
-        // Função para mostrar header manualmente (botão)
-        function showHeaderManually() {
-            showHeader();
-            
-            // Rolar suavemente para o topo
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
         // Função para renderizar cronograma
         function renderCronograma() {
             const container = document.querySelector('.timeline-pj');
@@ -1093,24 +936,6 @@
             });
         }
 
-        // Observador para animações das seções
-        function setupSectionObserver() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            });
-            
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        }
-
         // Inicializar tudo quando a página carregar
         document.addEventListener('DOMContentLoaded', function() {
             // Data atual
@@ -1124,15 +949,6 @@
             renderMateriais();
             renderResponsaveis();
             renderPendencias();
-            
-            // Adicionar evento de scroll
-            window.addEventListener('scroll', handleScroll);
-            
-            // Adicionar evento ao botão de mostrar header
-            showHeaderBtn.addEventListener('click', showHeaderManually);
-            
-            // Configurar observador das seções
-            setupSectionObserver();
             
             // Efeito de entrada suave
             document.body.style.opacity = '0';
