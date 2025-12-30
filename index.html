@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌟 PJ Lages de Pedra — Virada 2025-2026</title>
+    <title>🎵 Virada PJ 2026 | Cronograma Musical & Organização</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --pj-verde: #D3241B;
-            --pj-verde-claro: #D3241B;
-            --pj-verde-suave: #E8F5E9;
-            --pj-dourado: #FFD700;
-            --pj-branco: #FFFFFF;
-            --pj-cinza: #F5F5F5;
-            --pj-cinza-escuro: #424242;
-            --pj-texto: #212121;
-            --pj-borda: #C8E6C9;
-            --shadow: 0 2px 8px rgba(46, 125, 50, 0.1);
+            --primary-color: #D9251C; /* Azul suave e acolhedor */
+            --secondary-color: #FF9A76; /* Laranja caloroso */
+            --accent-color: #6BC5D2; /* Azul claro/verde água */
+            --light-color: #F7F9FC;
+            --dark-color: #2C3E50;
+            --text-color: #333;
+            --success-color: #4CAF50;
+            --warning-color: #FF9800;
+            --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.1);
             --radius: 12px;
-            --transition: all 0.3s ease;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
         }
 
         * {
@@ -28,623 +28,689 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--pj-cinza);
-            color: var(--pj-texto);
-            line-height: 1.6;
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
         }
 
         .container {
             width: 100%;
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Header simples sem firula */
-        .header-pj {
-            background: var(--pj-verde);
-            color: var(--pj-branco);
-            padding: 20px 0;
-            border-bottom: 4px solid var(--pj-dourado);
-            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+        /* Animação de entrada */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        /* Header com gradiente suave */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), #5B84C4);
+            color: white;
+            padding: 25px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 15px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .logo-container img {
+            max-height: 80px;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
         }
 
         .header-content {
             text-align: center;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out 0.2s both;
         }
 
-        .logo-pj {
+        .header-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 15px;
-            margin-bottom: 10px;
         }
 
-        .logo-pj i {
-            font-size: 2rem;
-            color: var(--pj-dourado);
-        }
-
-        .logo-pj h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .subtitle {
-            font-size: 1rem;
+        .header-subtitle {
+            font-size: 1.1rem;
             opacity: 0.9;
-            margin-bottom: 5px;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            font-weight: 300;
         }
 
-        .tagline {
-            font-size: 0.9rem;
+        .header-tagline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             background: rgba(255, 255, 255, 0.15);
-            padding: 8px 15px;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 10px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
             font-weight: 500;
+            margin-top: 10px;
+            animation: pulse 3s infinite ease-in-out;
         }
 
-        /* Welcome Section */
-        .welcome-section {
-            background: var(--pj-branco);
-            margin: 30px 0;
-            padding: 30px;
+        /* Navegação por abas */
+        .tab-navigation {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tab-btn {
+            background: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            color: var(--dark-color);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .tab-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+            color: var(--primary-color);
+        }
+
+        .tab-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Conteúdo das abas */
+        .tab-content {
+            display: none;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Seções gerais */
+        .section {
+            background: white;
             border-radius: var(--radius);
-            border-left: 5px solid var(--pj-verde);
-            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
         }
 
-        .welcome-title {
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .section-title {
             display: flex;
             align-items: center;
             gap: 15px;
-            margin-bottom: 20px;
-            color: var(--pj-verde);
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
         }
 
-        .welcome-title i {
+        .section-title i {
             font-size: 1.5rem;
         }
 
-        .focus-points {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 20px;
+        .section-title h2 {
+            font-size: 1.6rem;
         }
 
-        @media (min-width: 768px) {
-            .focus-points {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        .focus-point {
-            text-align: center;
-            padding: 15px;
-            background: var(--pj-verde-suave);
-            border-radius: 8px;
-            font-weight: 600;
-            color: var(--pj-verde);
-            transition: var(--transition);
-        }
-
-        .focus-point:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
-        }
-
-        /* Sections */
-        .section-pj {
-            background: var(--pj-branco);
-            margin: 25px 0;
-            padding: 25px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            border-top: 3px solid var(--pj-verde);
-        }
-
-        .section-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid var(--pj-borda);
-            color: var(--pj-verde);
-        }
-
-        .section-header i {
-            font-size: 1.4rem;
-        }
-
-        .section-header h2 {
-            font-size: 1.4rem;
-            font-weight: 600;
-        }
-
-        /* Timeline Cronograma */
-        .timeline-pj {
+        /* Cronograma Musical Estilizado */
+        .music-timeline {
             position: relative;
             padding-left: 30px;
         }
 
-        .timeline-pj::before {
+        .music-timeline::before {
             content: '';
             position: absolute;
-            left: 8px;
+            left: 0;
             top: 0;
             bottom: 0;
-            width: 3px;
-            background: var(--pj-verde);
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
             border-radius: 2px;
         }
 
-        .timeline-item {
+        .music-item {
             position: relative;
-            margin-bottom: 25px;
-            padding: 20px;
-            background: var(--pj-verde-suave);
-            border-radius: 8px;
-            border-left: 4px solid var(--pj-verde-claro);
+            margin-bottom: 30px;
+            padding: 25px;
+            background: var(--light-color);
+            border-radius: var(--radius);
+            border-left: 5px solid var(--primary-color);
             transition: var(--transition);
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: fadeInUp 0.6s ease-out forwards;
         }
 
-        .timeline-item:hover {
+        .music-item:nth-child(1) { animation-delay: 0.1s; }
+        .music-item:nth-child(2) { animation-delay: 0.2s; }
+        .music-item:nth-child(3) { animation-delay: 0.3s; }
+        .music-item:nth-child(4) { animation-delay: 0.4s; }
+        .music-item:nth-child(5) { animation-delay: 0.5s; }
+        .music-item:nth-child(6) { animation-delay: 0.6s; }
+        .music-item:nth-child(7) { animation-delay: 0.7s; }
+        .music-item:nth-child(8) { animation-delay: 0.8s; }
+        .music-item:nth-child(9) { animation-delay: 0.9s; }
+
+        .music-item:hover {
             transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         }
 
-        .timeline-item::before {
+        .music-item::before {
             content: '';
             position: absolute;
-            left: -30px;
-            top: 24px;
-            width: 15px;
-            height: 15px;
+            left: -35px;
+            top: 30px;
+            width: 16px;
+            height: 16px;
             border-radius: 50%;
-            background: var(--pj-branco);
-            border: 3px solid var(--pj-verde);
-            box-shadow: 0 0 0 3px var(--pj-verde-suave);
+            background: white;
+            border: 4px solid var(--primary-color);
+            z-index: 2;
         }
 
-        .timeline-time {
+        .music-time {
+            font-size: 1.1rem;
             font-weight: 700;
-            color: var(--pj-verde);
+            color: var(--primary-color);
             margin-bottom: 8px;
-            font-size: 1.1rem;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .timeline-details {
-            margin-top: 10px;
+        .music-moment {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--dark-color);
         }
 
-        .timeline-subitem {
-            margin: 8px 0;
-            padding-left: 15px;
-            position: relative;
+        .music-details {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #e0e0e0;
         }
 
-        .timeline-subitem::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--pj-verde);
-            font-weight: bold;
-            font-size: 1.2rem;
+        .detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+            padding: 8px 0;
         }
 
-        /* Etapas */
-        .etapas-container {
+        .detail-item i {
+            color: var(--secondary-color);
+            margin-top: 3px;
+        }
+
+        /* Cards de informações */
+        .info-cards {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
+            margin-top: 25px;
         }
 
-        @media (min-width: 768px) {
-            .etapas-container {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .etapa {
-            padding: 20px;
-            background: var(--pj-verde-suave);
+        .info-card {
+            background: white;
             border-radius: var(--radius);
-            border: 1px solid var(--pj-borda);
+            padding: 25px;
+            box-shadow: var(--shadow-light);
             transition: var(--transition);
-            height: 100%;
+            border-top: 4px solid var(--accent-color);
+            display: flex;
+            flex-direction: column;
         }
 
-        .etapa:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(46, 125, 50, 0.15);
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
         }
 
-        .etapa h3 {
-            color: var(--pj-verde);
+        .info-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        .info-card h3 i {
+            color: var(--accent-color);
+        }
+
+        /* Seção de preparação */
+        .preparation-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .step-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            border: 1px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--secondary-color);
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .step-card h3 {
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
         }
 
-        .etapa-list {
+        .step-list {
             list-style: none;
         }
 
-        .etapa-list li {
-            padding: 8px 0;
-            border-bottom: 1px dashed var(--pj-borda);
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            transition: var(--transition);
-        }
-
-        .etapa-list li:hover {
-            padding-left: 5px;
-            color: var(--pj-verde);
-        }
-
-        .etapa-list li:last-child {
-            border-bottom: none;
-        }
-
-        .etapa-list li i {
-            color: var(--pj-verde);
-            margin-top: 3px;
-            font-size: 0.9rem;
-        }
-
-        /* Materiais */
-        .materiais-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .material-item {
-            padding: 15px;
-            background: var(--pj-verde-suave);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border: 1px solid var(--pj-borda);
-            transition: var(--transition);
-        }
-
-        .material-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
-        }
-
-        .material-item i {
-            color: var(--pj-verde);
-        }
-
-        /* Responsáveis */
-        .responsaveis-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .responsavel-item {
-            padding: 15px;
-            background: var(--pj-verde-suave);
-            border-radius: 8px;
-            text-align: center;
-            border: 1px solid var(--pj-borda);
-            transition: var(--transition);
-        }
-
-        .responsavel-item:hover {
-            transform: translateY(-5px) scale(1.03);
-            box-shadow: 0 8px 20px rgba(46, 125, 50, 0.2);
-        }
-
-        .responsavel-item i {
-            font-size: 1.5rem;
-            color: var(--pj-verde);
-            margin-bottom: 10px;
-        }
-
-        /* Pendências */
-        .pendencias-list {
-            background: #FFF3E0;
-            border-radius: 8px;
-            padding: 20px;
-            border-left: 5px solid #FF9800;
-        }
-
-        .pendencias-list li {
+        .step-list li {
             padding: 10px 0;
-            border-bottom: 1px dashed #FFCC80;
+            border-bottom: 1px solid #f5f5f5;
             display: flex;
             align-items: flex-start;
-            gap: 12px;
+            gap: 10px;
             transition: var(--transition);
         }
 
-        .pendencias-list li:hover {
-            padding-left: 10px;
-            color: #E65100;
+        .step-list li:hover {
+            padding-left: 5px;
+            color: var(--primary-color);
         }
 
-        .pendencias-list li:last-child {
+        .step-list li:last-child {
             border-bottom: none;
         }
 
-        .pendencias-list li i {
-            color: #FF9800;
+        .step-list li i {
+            color: var(--accent-color);
             margin-top: 3px;
         }
 
         /* Footer */
-        .footer-pj {
-            background: var(--pj-verde);
-            color: var(--pj-branco);
-            padding: 30px 0;
-            margin-top: 40px;
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 50px;
             text-align: center;
-            border-top: 4px solid var(--pj-dourado);
         }
 
         .footer-info {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
         }
 
         .footer-item {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
             gap: 10px;
-            opacity: 0.9;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius);
             transition: var(--transition);
         }
 
         .footer-item:hover {
-            opacity: 1;
-            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
         }
 
         .footer-item i {
-            color: var(--pj-dourado);
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
         }
 
         .update-info {
             font-size: 0.9rem;
             margin-top: 20px;
-            padding-top: 15px;
+            padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             opacity: 0.8;
         }
 
+        /* Botões de ação */
+        .action-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(74, 111, 165, 0.3);
+        }
+
+        .action-btn:hover {
+            background: #3a5a8c;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(74, 111, 165, 0.4);
+        }
+
         /* Responsividade */
         @media (max-width: 768px) {
-            .container {
-                padding: 0 15px;
+            .header-title {
+                font-size: 1.8rem;
+                flex-direction: column;
+                gap: 10px;
             }
             
-            .section-pj {
+            .section {
                 padding: 20px;
-                margin: 20px 0;
             }
             
-            .materiais-grid,
-            .responsaveis-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .tab-navigation {
+                flex-direction: column;
+                align-items: center;
             }
             
-            .focus-points {
+            .tab-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .music-item {
+                padding: 20px;
+            }
+            
+            .info-cards, .preparation-steps {
                 grid-template-columns: 1fr;
             }
             
-            .header-pj {
-                padding: 15px 0;
-            }
-            
-            .logo-pj h1 {
-                font-size: 1.5rem;
-            }
-            
-            .subtitle {
-                font-size: 0.9rem;
-            }
-            
-            .tagline {
-                font-size: 0.8rem;
-                padding: 6px 12px;
+            .footer-info {
+                grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 480px) {
-            .materiais-grid,
-            .responsaveis-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .logo-pj h1 {
-                font-size: 1.3rem;
-            }
-            
-            .logo-pj i {
+            .header-title {
                 font-size: 1.5rem;
             }
             
-            .welcome-section,
-            .section-pj {
-                padding: 20px 15px;
+            .header-subtitle {
+                font-size: 1rem;
             }
             
-            .timeline-pj {
-                padding-left: 20px;
+            .section-title h2 {
+                font-size: 1.3rem;
             }
             
-            .timeline-item::before {
-                left: -25px;
+            .music-moment {
+                font-size: 1.1rem;
             }
         }
 
-        /* Scroll suave */
-        html {
-            scroll-behavior: smooth;
+        /* Efeitos visuais extras */
+        .floating-icon {
+            animation: float 5s infinite ease-in-out;
         }
 
-        /* Barra de rolagem bonitinha */
+        .highlight {
+            background: linear-gradient(120deg, rgba(255, 154, 118, 0.2) 0%, rgba(255, 154, 118, 0) 100%);
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        /* Barra de rolagem customizada */
         ::-webkit-scrollbar {
             width: 10px;
         }
 
         ::-webkit-scrollbar-track {
-            background: var(--pj-cinza);
+            background: #f1f1f1;
+            border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: var(--pj-verde);
-            border-radius: 5px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+            border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: var(--pj-verde-claro);
+            background: linear-gradient(to bottom, #3a5a8c, #5ab4c4);
         }
     </style>
 </head>
 <body>
-    <!-- Header simples -->
-    <header class="header-pj">
-        <div style="display: flex; align-items: center; justify-content: center;">
-            <img src="https://pj.org.br/wp-content/uploads/2024/05/cropped-PJ4-2.png" style="width:50%; max-width: 300px;" alt="Logo PJ">
-        </div>
+    <!-- Header -->
+    <header class="header">
         <div class="container">
+            <div class="logo-container">
+                <img src="https://pj.org.br/wp-content/uploads/2024/05/cropped-PJ4-2.png" alt="Logo PJ" style="max-height: 80px;">
+            </div>
             <div class="header-content">
-                <div class="logo-pj">
-                    <i class="fas fa-cross"></i>
-                    <h1>PJ Lages de Pedra</h1>
-                </div>
-                <div class="subtitle">🌟 Painel da Virada 2025/2026</div>
-                <div class="tagline">
-                    <i class="fas fa-users"></i> Coordenação • Organização Interna • Atualizações em Tempo Real
+                <h1 class="header-title">
+                    <i class="fas fa-music floating-icon"></i>
+                    <span>Virada PJ 2026</span>
+                    <i class="fas fa-star floating-icon" style="animation-delay: 0.5s;"></i>
+                </h1>
+                <p class="header-subtitle">Cronograma para virada de ano com propósito, união e alegria</p>
+                <div class="header-tagline">
+                    <i class="fas fa-heart"></i>
+                    <span>Celebrando a fé e a amizade</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Conteúdo principal -->
     <div class="container">
-        <!-- Welcome Section -->
-        <section class="welcome-section">
-            <div class="welcome-title">
-                <i class="fas fa-dove"></i>
-                <h2>🕊️ Bem-vindos ao Painel Oficial da Virada</h2>
-            </div>
-            <p>Este site reúne tudo o que a coordenação precisa para conduzir o evento da Virada com clareza, unidade e leveza. Aqui você acompanha o cronograma, as tarefas, os responsáveis, os materiais e o andamento das preparações.</p>
-            
-            <div class="focus-points">
-                <div class="focus-point">✔️ Organização</div>
-                <div class="focus-point">✔️ Espiritualidade</div>
-                <div class="focus-point">✔️ Dinâmica jovem</div>
-                <div class="focus-point">✔️ Zero correria</div>
-            </div>
-        </section>
+        <!-- Navegação por abas -->
+        <div class="tab-navigation">
+            <button class="tab-btn active" data-tab="music">
+                <i class="fas fa-music"></i> Cronograma 
+            </button>
+           
+        <!-- Aba 1: Cronograma Musical -->
+        <div class="tab-content active" id="music-tab">
+            <section class="section">
+                <div class="section-title">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h2>🎵 Cronograma da Virada</h2>
+                </div>
+                <p style="margin-bottom: 25px; color: #666; font-style: italic;">Uma trilha sonora cuidadosamente planejada para acompanhar cada momento especial da nossa virada.</p>
+                
+                <div class="music-timeline">
+                    <!-- Itens do cronograma serão inseridos via JavaScript -->
+                </div>
+                
+                <button class="action-btn" id="shareSchedule">
+                    <i class="fas fa-share-alt"></i> Compartilhar Cronograma
+                </button>
+            </section>
+        </div>
 
-        <!-- Cronograma -->
-        <section class="section-pj">
-            <div class="section-header">
-                <i class="fas fa-calendar-alt"></i>
-                <h2>📅 Cronograma Geral do Evento</h2>
-            </div>
-            <p style="margin-bottom: 20px; font-style: italic; color: #666;">(Versão Preliminar - detalhes finais serão definidos no encontro de 21/12)</p>
+        <!-- Aba 2: Preparação -->
+        <div class="tab-content" id="preparation-tab">
+            <section class="section">
+                <div class="section-title">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h2>📋 Etapas de Preparação</h2>
+                </div>
+                <p style="margin-bottom: 25px;">Tudo organizado para que possamos nos concentrar no que realmente importa: a experiência espiritual e comunitária.</p>
+                
+                <div class="preparation-steps">
+                    <!-- Etapas serão inseridas via JavaScript -->
+                </div>
+            </section>
             
-            <div class="timeline-pj">
-                <!-- Timeline items serão inseridos via JavaScript -->
-            </div>
-        </section>
+            <section class="section">
+                <div class="section-title">
+                    <i class="fas fa-question-circle"></i>
+                    <h2>❓ Decisões Pendentes</h2>
+                </div>
+                <p style="margin-bottom: 20px; color: #666;">Tópicos para serem definidos no nosso encontro de planejamento.</p>
+                
+                <div class="info-cards">
+                    <!-- Pendências serão inseridas via JavaScript -->
+                </div>
+            </section>
+        </div>
 
-        <!-- Etapas de Preparação -->
-        <section class="section-pj">
-            <div class="section-header">
-                <i class="fas fa-tasks"></i>    
-                <h2>🧭 Etapas de Preparação</h2>
-            </div>
-            <p style="margin-bottom: 20px;">Acompanhe o que falta, o que já foi feito e o que vamos revisar no encontro.</p>
-            
-            <div class="etapas-container">
-                <!-- Etapas serão inseridas via JavaScript -->
-            </div>
-        </section>
+        <!-- Aba 3: Materiais -->
+        <div class="tab-content" id="materials-tab">
+            <section class="section">
+                <div class="section-title">
+                    <i class="fas fa-box-open"></i>
+                    <h2>📦 Lista de Materiais</h2>
+                </div>
+                <p style="margin-bottom: 25px;">Tudo o que precisamos providenciar para que o evento aconteça com fluidez.</p>
+                
+                <div class="info-cards" id="materials-container">
+                    <!-- Materiais serão inseridos via JavaScript -->
+                </div>
+            </section>
+        </div>
 
-        <!-- Materiais -->
-        <section class="section-pj">
-            <div class="section-header">
-                <i class="fas fa-clipboard-list"></i>
-                <h2>🧺 Lista Geral de Materiais</h2>
-            </div>
-            <p style="margin-bottom: 20px;">(para preparar antes do encontro)</p>
-            
-            <div class="materiais-grid">
-                <!-- Materiais serão inseridos via JavaScript -->
-            </div>
-        </section>
-
-        <!-- Responsáveis -->
-        <section class="section-pj">
-            <div class="section-header">
-                <i class="fas fa-user-friends"></i>
-                <h2>👥 Responsáveis do Evento</h2>
-            </div>
-            <p style="margin-bottom: 20px;">(a ser definido no encontro)</p>
-            
-            <div class="responsaveis-grid">
-                <!-- Responsáveis serão inseridos via JavaScript -->
-            </div>
-        </section>
-
-        <!-- Pendências -->
-        <section class="section-pj">
-            <div class="section-header">
-                <i class="fas fa-question-circle"></i>
-                <h2>❓ Decisões Pendentes (para o dia 21/12)</h2>
-            </div>
-            
-            <ul class="pendencias-list">
-                <!-- Pendências serão inseridas via JavaScript -->
-            </ul>
-        </section>
+        <!-- Aba 4: Equipe -->
+        <div class="tab-content" id="team-tab">
+            <section class="section">
+                <div class="section-title">
+                    <i class="fas fa-users"></i>
+                    <h2>👥 Nossa Equipe</h2>
+                </div>
+                <p style="margin-bottom: 25px;">Cada pessoa tem um papel especial para fazer desta virada uma experiência inesquecível.</p>
+                
+                <div class="info-cards" id="team-container">
+                    <!-- Equipe será inserida via JavaScript -->
+                </div>
+            </section>
+        </div>
     </div>
 
     <!-- Footer -->
-    <footer class="footer-pj">
+    <footer class="footer">
         <div class="container">
             <div class="footer-info">
                 <div class="footer-item">
                     <i class="fas fa-calendar-day"></i>
-                    <span>Próximo encontro: 21 de Dezembro</span>
+                    <h3>Horário da Virada</h3>
+                    <p> 31 de Dezembro -> 21:30 </p>
                 </div>
                 <div class="footer-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Local: Igreja Matriz - Lages de Pedra</span>
+                    <h3>Local</h3>
+                    <p>Igreja Matriz - Lages de Pedra</p>
                 </div>
                 <div class="footer-item">
                     <i class="fas fa-clock"></i>
-                    <span>Horário: 31/12 - 21:00 até 01/01 - 02:00</span>
+                    <h3>Horário da Virada</h3>
+                    <p>31/12 - 21:00 até 01/01 - 02:00</p>
                 </div>
             </div>
             
@@ -655,229 +721,210 @@
     </footer>
 
     <script>
-        // Dados do Cronograma
-        const cronograma = [
+        // Dados do Cronograma Musical
+        const musicSchedule = [
             {
-                hora: "21h30 — Abertura",
-                descricao: "Início oficial da Virada",
-                detalhes: [
-                    "Recepção e acolhida",
-                    "Palavra que representa o ano",
-                    "Oração rápida",
-                    "Formação dos times: Estrela ✨ e Luz 🌟"
+                time: "21:30 – 21:45",
+                moment: "Recepção / Chegada",
+                details: [
+                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> criar um ambiente confortável para conversa e integração" },
+                    { icon: "fas fa-exclamation-triangle", text: "<strong>Evitar:</strong> músicas muito lentas ou que 'puxem' atenção demais logo no início" }
                 ]
             },
             {
-                hora: "21h40 — Corrida do Ovo Missionário",
-                descricao: "Dinâmica com desafio físico e conhecimento bíblico",
-                detalhes: [
-                    "Corrida do ovo",
-                    "Perguntas bíblicas simples"
+                time: "21:45 – 22:05",
+                moment: "Quebra-gelo / Dinâmicas",
+                details: [
+                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> levantar a energia da galera e quebrar a timidez" },
+                    { icon: "fas fa-lightbulb", text: "<strong>Dica:</strong> baixar o volume durante as falas e subir nos desafios" }
                 ]
             },
             {
-                hora: "21h55 — Telefone sem fio",
-                descricao: "Sentar em circulo",
-                detalhes: [
-                    "Sussurrar frase ao participante",
-                    "Comparar frase final e inicial",
-                    "Refletir comunicação e distorções",
-
+                time: "22:05 – 22:30",
+                moment: "Amigo Secreto",
+                details: [
+                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> manter o clima leve e organizado" },
+                    { icon: "fas fa-exclamation-triangle", text: "<strong>Evitar:</strong> músicas que atrapalhem a escuta das apresentações" }
                 ]
             },
             {
-                hora: "22h05 — Cabo de Guerra dos Profetas",
-                descricao: "Competição em equipe",
-                detalhes: [
-                    "Masculino",
-                    "Feminino",
-                    "Torcida valendo ponto (opcional)"
+                time: "22:30 – 22:45",
+                moment: "Músicas",
+                details: [
+                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> direcionar o coração e criar unidade" },
+                    { icon: "fas fa-exclamation-triangle", text: "<strong>Atenção:</strong> respeitar o tempo para não cansar" }
                 ]
             },
             {
-                hora: "22h20 — Dinâmica e Cantos",
-                descricao: "Virar pelo avesso",
-                detalhes: [
-                    "Formar círculo de mãos dadas",
-                    "Desafio de organização",
-                    "Executar tarefa virando avesso",
-                    "Refletir união e aprendizado"
+                time: "22:45 – 23:00",
+                moment: "Palavra + Oração",
+                details: [
+                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> apoiar o momento sem distrair" },
+                    { icon: "fas fa-exclamation-triangle", text: "<strong>Evitar:</strong> qualquer som que roube atenção da fala" }
                 ]
             },
             {
-                hora: "22h35 — Quiz Passa ou Repassa",
-                descricao: "Perguntas rápidas com balões surpresa",
-                detalhes: [
-                    "Perguntas rápidas",
-                    "Balões com surpresas: +1 / –1 / troca de time / indicar alguém"
+                time: "23:00 – 23:30",
+                moment: "Confraternização / Comida",
+                details: [
+                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> manter alegria e fluidez enquanto a galera se serve" },
+                    { icon: "fas fa-lightbulb", text: "<strong>Volume:</strong> confortável para conversa" }
                 ]
             },
             {
-                hora: "22h50 — Pausa + Roda Engraçada",
-                descricao: "Momento de descontração",
-                detalhes: [
-                    "Compartilhar o momento mais engraçado do ano"
+                time: "23:30 – 23:50",
+                moment: "Preparação para a Virada",
+                details: [
+                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> preparar emocionalmente para o novo ano" },
+                    { icon: "fas fa-star", text: "<strong>Clima:</strong> de propósito e esperança" }
                 ]
             },
             {
-                hora: "23h00 — Gincana Final",
-                descricao: "Desafio 10 Segundos",
-                detalhes: [
-                    "Listar 3 personagens bíblicos",
-                    "Pose contagiante",
-                    "Dizer 5 livros da Bíblia correndo",
-                    "Criar grito de guerra",
-                    "Encenação rápida (Jonas no peixe, etc.)",
-                    "Segurar garrafa com o cotovelo",
-                    "Andar como animal bíblico",
-                    "Imitações simples",
-                    "Desafios surpresa"
+                time: "23:50 – 00:00",
+                moment: "Contagem Regressiva 🎆",
+                details: [
+                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> criar emoção e unidade" },
+                    { icon: "fas fa-fire", text: "<strong>Dica:</strong> reduzir tudo nos últimos 10 segundos e deixar só a galera contar" }
                 ]
             },
             {
-                hora: "23h35 — Momento de Luz",
-                descricao: "Reflexão espiritual",
-                detalhes: [
-                    "O que deixar pra trás",
-                    "O que viver no novo ano",
-                    "Oração + Pai-Nosso"
-                ]
-            },
-            {
-                hora: "23h45 — Contagem Regressiva + Foto",
-                descricao: "Celebração final",
-                detalhes: [
-                    "Foto geral de branco",
-                    "Feliz Ano Novo ✨"
+                time: "00:00 – 00:10",
+                moment: "Ano Novo 🎉",
+                details: [
+                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> alegria coletiva e gratidão pela virada" }
                 ]
             }
         ];
 
-        // Dados das Etapas
-        const etapas = [
+        // Dados das Etapas de Preparação
+        const preparationSteps = [
             {
-                titulo: "1) Planejamento Estratégico",
+                title: "Planejamento Estratégico",
                 icon: "fas fa-clipboard-check",
-                itens: [
+                items: [
                     "Tema oficial da Virada",
-                    "Aprovação do roteiro",
-                    "Definição dos responsáveis",
-                    "Enquetes para validar ideias",
-                    "Materiais necessários",
+                    "Aprovação do roteiro completo",
+                    "Definição dos responsáveis por cada momento",
+                    "Enquetes para validar ideias com o grupo",
+                    "Lista de materiais necessários",
                     "Mensagem-base para WhatsApp",
                     "Arte preliminar da programação"
                 ]
             },
             {
-                titulo: "2) Produção e Organização",
+                title: "Produção e Organização",
                 icon: "fas fa-tools",
-                itens: [
-                    "Comprar/pegar materiais",
-                    "Preparar perguntas e desafios",
-                    "Criar balões-surpresa",
-                    "Separar ovos, corda, papeis, etc.",
-                    "Criar playlist oficial",
+                items: [
+                    "Comprar/pegar todos os materiais",
+                    "Preparar perguntas e desafios para as dinâmicas",
+                    "Criar balões-surpresa (se aplicável)",
+                    "Separar ovos, corda, papéis, etc.",
+                    "Criar playlist oficial da virada",
                     "Ensaiar abertura e Momento de Luz",
                     "Organizar som, foto e recepção",
-                    "Montar tabela de pontuação",
-                    "Arte final da programação"
+                    "Montar tabela de pontuação para gincanas",
+                    "Arte final da programação para impressão"
                 ]
             },
             {
-                titulo: "3) Execução do Dia 31",
+                title: "Execução no Dia 31",
                 icon: "fas fa-play-circle",
-                itens: [
-                    "Manhã: Conferir materiais, testar som",
-                    "Tarde: Montagem do espaço, balões",
-                    "Noite: Seguir cronograma, registrar fotos"
+                items: [
+                    "Manhã: Conferir materiais, testar som e equipamentos",
+                    "Tarde: Montagem do espaço, encher balões",
+                    "Noite: Seguir cronograma, registrar fotos e vídeos",
+                    "Pós-evento: Agradecimentos e feedback"
                 ]
             }
         ];
 
         // Dados dos Materiais
-        const materiais = [
-            { nome: "Ovos para corrida", icon: "fas fa-egg" },
-            { nome: "Corda (cabo de guerra)", icon: "fas fa-rope" },
-            { nome: "Balões", icon: "fas fa-balloon" },
-            { nome: "Papéis e canetas", icon: "fas fa-pen" },
-            { nome: "Caixa de som", icon: "fas fa-volume-up" },
-            { nome: "Extensões", icon: "fas fa-plug" },
-            { nome: "Mensagens impressas", icon: "fas fa-file-alt" },
-            { nome: "Água", icon: "fas fa-tint" },
-            { nome: "Prêmios simples", icon: "fas fa-gift" },
-            { nome: "Plaquinhas de pontuação", icon: "fas fa-chart-line" }
+        const materials = [
+            { name: "Ovos para corrida", icon: "fas fa-egg", category: "Dinâmicas" },
+            { name: "Corda (cabo de guerra)", icon: "fas fa-rope", category: "Dinâmicas" },
+            { name: "Balões coloridos", icon: "fas fa-balloon", category: "Decoração" },
+            { name: "Papéis e canetas", icon: "fas fa-pen", category: "Geral" },
+            { name: "Caixa de som Bluetooth", icon: "fas fa-volume-up", category: "Som" },
+            { name: "Extensões e carregadores", icon: "fas fa-plug", category: "Elétrica" },
+            { name: "Mensagens impressas", icon: "fas fa-file-alt", category: "Material" },
+            { name: "Água e copos", icon: "fas fa-tint", category: "Alimentação" },
+            { name: "Prêmios simples", icon: "fas fa-gift", category: "Prêmios" },
+            { name: "Plaquinhas de pontuação", icon: "fas fa-chart-line", category: "Dinâmicas" }
         ];
 
-        // Dados dos Responsáveis
-        const responsaveis = [
-            { nome: "Condução geral", icon: "fas fa-user-tie" },
-            { nome: "Oração inicial", icon: "fas fa-pray" },
-            { nome: "Gincanas", icon: "fas fa-gamepad" },
-            { nome: "Som e música", icon: "fas fa-music" },
-            { nome: "Fotos e vídeos", icon: "fas fa-camera" },
-            { nome: "Recepção", icon: "fas fa-door-open" },
-            { nome: "Cronometragem", icon: "fas fa-stopwatch" },
-            { nome: "Organização do espaço", icon: "fas fa-th-large" },
-            { nome: "Equipe de apoio", icon: "fas fa-hands-helping" }
+        // Dados da Equipe
+        const team = [
+            { role: "Condução geral", icon: "fas fa-user-tie", person: "A definir" },
+            { role: "Oração inicial", icon: "fas fa-pray", person: "A definir" },
+            { role: "Gincanas e dinâmicas", icon: "fas fa-gamepad", person: "A definir" },
+            { role: "Som e música", icon: "fas fa-music", person: "A definir" },
+            { role: "Fotos e vídeos", icon: "fas fa-camera", person: "A definir" },
+            { role: "Recepção e acolhida", icon: "fas fa-door-open", person: "A definir" },
+            { role: "Cronometragem", icon: "fas fa-stopwatch", person: "A definir" },
+            { role: "Organização do espaço", icon: "fas fa-th-large", person: "A definir" },
+            { role: "Equipe de apoio", icon: "fas fa-hands-helping", person: "Todos!" }
         ];
 
         // Dados das Pendências
-        const pendencias = [
+        const pendingDecisions = [
             "Cores oficiais do evento",
             "Arte final da programação",
             "Responsáveis de cada dinâmica",
-            "Materiais faltantes",
-            "Ajustes no cronograma",
+            "Materiais faltantes para comprar",
+            "Ajustes finais no cronograma",
             "Divisão final dos times",
             "Música do Momento de Luz",
             "Frase do encerramento"
         ];
 
-        // Função para renderizar cronograma
-        function renderCronograma() {
-            const container = document.querySelector('.timeline-pj');
+        // Função para renderizar o cronograma musical
+        function renderMusicSchedule() {
+            const container = document.querySelector('.music-timeline');
             container.innerHTML = '';
             
-            cronograma.forEach(item => {
+            musicSchedule.forEach((item, index) => {
                 const div = document.createElement('div');
-                div.className = 'timeline-item';
+                div.className = 'music-item';
                 
-                let detalhesHTML = '';
-                if (item.detalhes && item.detalhes.length > 0) {
-                    detalhesHTML = `
-                        <div class="timeline-details">
-                            ${item.detalhes.map(d => `
-                                <div class="timeline-subitem">${d}</div>
+                let detailsHTML = '';
+                if (item.details && item.details.length > 0) {
+                    detailsHTML = `
+                        <div class="music-details">
+                            ${item.details.map(d => `
+                                <div class="detail-item">
+                                    <i class="${d.icon}"></i>
+                                    <div>${d.text}</div>
+                                </div>
                             `).join('')}
                         </div>
                     `;
                 }
                 
                 div.innerHTML = `
-                    <div class="timeline-time">
-                        <i class="far fa-clock"></i> ${item.hora}
+                    <div class="music-time">
+                        <i class="far fa-clock"></i> ${item.time}
                     </div>
-                    <div><strong>${item.descricao}</strong></div>
-                    ${detalhesHTML}
+                    <div class="music-moment">${item.moment}</div>
+                    ${detailsHTML}
                 `;
                 
                 container.appendChild(div);
             });
         }
 
-        // Função para renderizar etapas
-        function renderEtapas() {
-            const container = document.querySelector('.etapas-container');
+        // Função para renderizar as etapas de preparação
+        function renderPreparationSteps() {
+            const container = document.querySelector('.preparation-steps');
             container.innerHTML = '';
             
-            etapas.forEach(etapa => {
+            preparationSteps.forEach(step => {
                 const div = document.createElement('div');
-                div.className = 'etapa';
+                div.className = 'step-card';
                 
                 div.innerHTML = `
-                    <h3><i class="${etapa.icon}"></i> ${etapa.titulo}</h3>
-                    <ul class="etapa-list">
-                        ${etapa.itens.map(item => `
+                    <h3><i class="${step.icon}"></i> ${step.title}</h3>
+                    <ul class="step-list">
+                        ${step.items.map(item => `
                             <li><i class="fa-regular fa-circle"></i> ${item}</li>
                         `).join('')}
                     </ul>
@@ -888,35 +935,39 @@
         }
 
         // Função para renderizar materiais
-        function renderMateriais() {
-            const container = document.querySelector('.materiais-grid');
+        function renderMaterials() {
+            const container = document.getElementById('materials-container');
             container.innerHTML = '';
             
-            materiais.forEach(material => {
+            materials.forEach(material => {
                 const div = document.createElement('div');
-                div.className = 'material-item';
+                div.className = 'info-card';
                 
                 div.innerHTML = `
-                    <i class="${material.icon}"></i>
-                    <span>${material.nome}</span>
+                    <h3><i class="${material.icon}"></i> ${material.name}</h3>
+                    <p style="margin-top: auto; color: #666; font-size: 0.9rem;">
+                        <i class="fas fa-tag"></i> ${material.category}
+                    </p>
                 `;
                 
                 container.appendChild(div);
             });
         }
 
-        // Função para renderizar responsáveis
-        function renderResponsaveis() {
-            const container = document.querySelector('.responsaveis-grid');
+        // Função para renderizar equipe
+        function renderTeam() {
+            const container = document.getElementById('team-container');
             container.innerHTML = '';
             
-            responsaveis.forEach(resp => {
+            team.forEach(member => {
                 const div = document.createElement('div');
-                div.className = 'responsavel-item';
+                div.className = 'info-card';
                 
                 div.innerHTML = `
-                    <i class="${resp.icon}"></i>
-                    <div>${resp.nome}</div>
+                    <h3><i class="${member.icon}"></i> ${member.role}</h3>
+                    <p style="margin-top: auto; font-weight: 500; color: var(--primary-color);">
+                        ${member.person}
+                    </p>
                 `;
                 
                 container.appendChild(div);
@@ -924,17 +975,25 @@
         }
 
         // Função para renderizar pendências
-        function renderPendencias() {
-            const container = document.querySelector('.pendencias-list');
+        function renderPendingDecisions() {
+            const container = document.querySelector('#preparation-tab .info-cards');
+            if (!container) return;
+            
             container.innerHTML = '';
             
-            pendencias.forEach(pendencia => {
-                const li = document.createElement('li');
-                li.innerHTML = `
-                    <i class="fas fa-circle-notch"></i>
-                    <span>${pendencia}</span>
+            pendingDecisions.forEach(decision => {
+                const div = document.createElement('div');
+                div.className = 'info-card';
+                div.style.borderTop = '4px solid var(--warning-color)';
+                
+                div.innerHTML = `
+                    <h3><i class="fas fa-question"></i> ${decision}</h3>
+                    <p style="margin-top: auto; color: #666; font-size: 0.9rem;">
+                        <i class="fas fa-calendar-day"></i> Para definir no encontro de 21/12
+                    </p>
                 `;
-                container.appendChild(li);
+                
+                container.appendChild(div);
             });
         }
 
@@ -946,11 +1005,45 @@
             document.getElementById('current-date').textContent = now.toLocaleDateString('pt-BR', options) + ' ' + now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
             
             // Renderizar todos os componentes
-            renderCronograma();
-            renderEtapas();
-            renderMateriais();
-            renderResponsaveis();
-            renderPendencias();
+            renderMusicSchedule();
+            renderPreparationSteps();
+            renderMaterials();
+            renderTeam();
+            renderPendingDecisions();
+            
+            // Configurar navegação por abas
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remover classe active de todos os botões e conteúdos
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Adicionar classe active ao botão clicado
+                    btn.classList.add('active');
+                    
+                    // Mostrar o conteúdo correspondente
+                    const tabId = btn.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-tab`).classList.add('active');
+                });
+            });
+            
+            // Configurar botão de compartilhar
+            document.getElementById('shareSchedule').addEventListener('click', () => {
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Cronograma Musical - Virada PJ 2026',
+                        text: 'Confira o cronograma musical da nossa virada de ano na PJ!',
+                        url: window.location.href
+                    });
+                } else {
+                    // Fallback para copiar link
+                    navigator.clipboard.writeText(window.location.href);
+                    alert('Link copiado para a área de transferência!');
+                }
+            });
             
             // Efeito de entrada suave
             document.body.style.opacity = '0';
@@ -959,6 +1052,29 @@
             setTimeout(() => {
                 document.body.style.opacity = '1';
             }, 100);
+            
+            // Adicionar observador de interseção para animações
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observar todas as seções
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
         });
     </script>
 </body>
