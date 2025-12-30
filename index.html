@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEPLRPHMS9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BEPLRPHMS9');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🎵 Virada PJ 2026 | Cronograma Musical & Organização</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <style>
         :root {
-            --primary-color: #D9251C; /* Azul suave e acolhedor */
-            --secondary-color: #FF9A76; /* Laranja caloroso */
-            --accent-color: #6BC5D2; /* Azul claro/verde água */
+            --primary-color: #D9251C;
+            /* Azul suave e acolhedor */
+            --secondary-color: #FF9A76;
+            /* Laranja caloroso */
+            --accent-color: #6BC5D2;
+            /* Azul claro/verde água */
             --light-color: #F7F9FC;
-            --dark-color: #2C3E50;
+            --dark-color: #D9251C;
             --text-color: #333;
             --success-color: #4CAF50;
             --warning-color: #FF9800;
@@ -41,7 +56,10 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
             line-height: 1.3;
@@ -60,6 +78,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -67,18 +86,24 @@
         }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-10px);
             }
         }
 
         @keyframes pulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 opacity: 1;
             }
+
             50% {
                 opacity: 0.7;
             }
@@ -263,15 +288,41 @@
             animation: fadeInUp 0.6s ease-out forwards;
         }
 
-        .music-item:nth-child(1) { animation-delay: 0.1s; }
-        .music-item:nth-child(2) { animation-delay: 0.2s; }
-        .music-item:nth-child(3) { animation-delay: 0.3s; }
-        .music-item:nth-child(4) { animation-delay: 0.4s; }
-        .music-item:nth-child(5) { animation-delay: 0.5s; }
-        .music-item:nth-child(6) { animation-delay: 0.6s; }
-        .music-item:nth-child(7) { animation-delay: 0.7s; }
-        .music-item:nth-child(8) { animation-delay: 0.8s; }
-        .music-item:nth-child(9) { animation-delay: 0.9s; }
+        .music-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .music-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .music-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .music-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .music-item:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .music-item:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .music-item:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .music-item:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+        .music-item:nth-child(9) {
+            animation-delay: 0.9s;
+        }
 
         .music-item:hover {
             transform: translateX(5px);
@@ -509,30 +560,31 @@
                 flex-direction: column;
                 gap: 10px;
             }
-            
+
             .section {
                 padding: 20px;
             }
-            
+
             .tab-navigation {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .tab-btn {
                 width: 100%;
                 max-width: 300px;
                 justify-content: center;
             }
-            
+
             .music-item {
                 padding: 20px;
             }
-            
-            .info-cards, .preparation-steps {
+
+            .info-cards,
+            .preparation-steps {
                 grid-template-columns: 1fr;
             }
-            
+
             .footer-info {
                 grid-template-columns: 1fr;
             }
@@ -542,15 +594,15 @@
             .header-title {
                 font-size: 1.5rem;
             }
-            
+
             .header-subtitle {
                 font-size: 1rem;
             }
-            
+
             .section-title h2 {
                 font-size: 1.3rem;
             }
-            
+
             .music-moment {
                 font-size: 1.1rem;
             }
@@ -587,12 +639,14 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="logo-container">
-                <img src="https://pj.org.br/wp-content/uploads/2024/05/cropped-PJ4-2.png" alt="Logo PJ" style="max-height: 80px;">
+                <img src="https://pj.org.br/wp-content/uploads/2024/05/cropped-PJ4-2.png" alt="Logo PJ"
+                    style="max-height: 80px;">
             </div>
             <div class="header-content">
                 <h1 class="header-title">
@@ -613,282 +667,342 @@
         <!-- Navegação por abas -->
         <div class="tab-navigation">
             <button class="tab-btn active" data-tab="music">
-                <i class="fas fa-music"></i> Cronograma 
+                <i class="fas fa-music"></i> Cronograma
             </button>
-           
-        <!-- Aba 1: Cronograma Musical -->
-        <div class="tab-content active" id="music-tab">
-            <section class="section">
-                <div class="section-title">
-                    <i class="fas fa-calendar-alt"></i>
-                    <h2>🎵 Cronograma da Virada</h2>
-                </div>
-                <p style="margin-bottom: 25px; color: #666; font-style: italic;">Uma trilha sonora cuidadosamente planejada para acompanhar cada momento especial da nossa virada.</p>
-                
-                <div class="music-timeline">
-                    <!-- Itens do cronograma serão inseridos via JavaScript -->
-                </div>
-                
-                <button class="action-btn" id="shareSchedule">
-                    <i class="fas fa-share-alt"></i> Compartilhar Cronograma
-                </button>
-            </section>
-        </div>
 
-        <!-- Aba 2: Preparação -->
-        <div class="tab-content" id="preparation-tab">
-            <section class="section">
-                <div class="section-title">
-                    <i class="fas fa-clipboard-check"></i>
-                    <h2>📋 Etapas de Preparação</h2>
-                </div>
-                <p style="margin-bottom: 25px;">Tudo organizado para que possamos nos concentrar no que realmente importa: a experiência espiritual e comunitária.</p>
-                
-                <div class="preparation-steps">
-                    <!-- Etapas serão inseridas via JavaScript -->
-                </div>
-            </section>
-            
-            <section class="section">
-                <div class="section-title">
-                    <i class="fas fa-question-circle"></i>
-                    <h2>❓ Decisões Pendentes</h2>
-                </div>
-                <p style="margin-bottom: 20px; color: #666;">Tópicos para serem definidos no nosso encontro de planejamento.</p>
-                
-                <div class="info-cards">
-                    <!-- Pendências serão inseridas via JavaScript -->
-                </div>
-            </section>
-        </div>
+            <!-- Aba 1: Cronograma Musical -->
+            <div class="tab-content active" id="music-tab">
+                <section class="section">
+                    <div class="section-title">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h2>🎵 Cronograma da Virada</h2>
+                    </div>
+                    <p style="margin-bottom: 25px; color: #666; font-style: italic;">Uma trilha sonora cuidadosamente
+                        planejada para acompanhar cada momento especial da nossa virada.</p>
 
-        <!-- Aba 3: Materiais -->
-        <div class="tab-content" id="materials-tab">
-            <section class="section">
-                <div class="section-title">
-                    <i class="fas fa-box-open"></i>
-                    <h2>📦 Lista de Materiais</h2>
-                </div>
-                <p style="margin-bottom: 25px;">Tudo o que precisamos providenciar para que o evento aconteça com fluidez.</p>
-                
-                <div class="info-cards" id="materials-container">
-                    <!-- Materiais serão inseridos via JavaScript -->
-                </div>
-            </section>
-        </div>
+                    <div class="music-timeline">
+                        <!-- Itens do cronograma serão inseridos via JavaScript -->
+                    </div>
 
-        <!-- Aba 4: Equipe -->
-        <div class="tab-content" id="team-tab">
-            <section class="section">
-                <div class="section-title">
-                    <i class="fas fa-users"></i>
-                    <h2>👥 Nossa Equipe</h2>
-                </div>
-                <p style="margin-bottom: 25px;">Cada pessoa tem um papel especial para fazer desta virada uma experiência inesquecível.</p>
-                
-                <div class="info-cards" id="team-container">
-                    <!-- Equipe será inserida via JavaScript -->
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-info">
-                <div class="footer-item">
-                    <i class="fas fa-calendar-day"></i>
-                    <h3>Horário da Virada</h3>
-                    <p> 31 de Dezembro -> 21:30 </p>
-                </div>
-                <div class="footer-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Local</h3>
-                    <p>Igreja Matriz - Lages de Pedra</p>
-                </div>
-                <div class="footer-item">
-                    <i class="fas fa-clock"></i>
-                    <h3>Horário da Virada</h3>
-                    <p>31/12 - 21:00 até 01/01 - 02:00</p>
-                </div>
+                    <button class="action-btn" id="shareSchedule">
+                        <i class="fas fa-share-alt"></i> Compartilhar Cronograma
+                    </button>
+                </section>
             </div>
-            
-            <div class="update-info">
-                <i class="fas fa-sync-alt"></i> Última atualização: <span id="current-date"></span>
+
+            <!-- Aba 2: Preparação -->
+            <div class="tab-content" id="preparation-tab">
+                <section class="section">
+                    <div class="section-title">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h2>📋 Etapas de Preparação</h2>
+                    </div>
+                    <p style="margin-bottom: 25px;">Tudo organizado para que possamos nos concentrar no que realmente
+                        importa: a experiência espiritual e comunitária.</p>
+
+                    <div class="preparation-steps">
+                        <!-- Etapas serão inseridas via JavaScript -->
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-title">
+                        <i class="fas fa-question-circle"></i>
+                        <h2>❓ Decisões Pendentes</h2>
+                    </div>
+                    <p style="margin-bottom: 20px; color: #666;">Tópicos para serem definidos no nosso encontro de
+                        planejamento.</p>
+
+                    <div class="info-cards">
+                        <!-- Pendências serão inseridas via JavaScript -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Aba 3: Materiais -->
+            <div class="tab-content" id="materials-tab">
+                <section class="section">
+                    <div class="section-title">
+                        <i class="fas fa-box-open"></i>
+                        <h2>📦 Lista de Materiais</h2>
+                    </div>
+                    <p style="margin-bottom: 25px;">Tudo o que precisamos providenciar para que o evento aconteça com
+                        fluidez.</p>
+
+                    <div class="info-cards" id="materials-container">
+                        <!-- Materiais serão inseridos via JavaScript -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Aba 4: Equipe -->
+            <div class="tab-content" id="team-tab">
+                <section class="section">
+                    <div class="section-title">
+                        <i class="fas fa-users"></i>
+                        <h2>👥 Nossa Equipe</h2>
+                    </div>
+                    <p style="margin-bottom: 25px;">Cada pessoa tem um papel especial para fazer desta virada uma
+                        experiência inesquecível.</p>
+
+                    <div class="info-cards" id="team-container">
+                        <!-- Equipe será inserida via JavaScript -->
+                    </div>
+                </section>
             </div>
         </div>
-    </footer>
 
-    <script>
-        // Dados do Cronograma Musical
-        const musicSchedule = [
-            {
-                time: "21:30 – 21:45",
-                moment: "Recepção / Chegada",
-                details: [
-                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> criar um ambiente confortável para conversa e integração" },
-                    { icon: "fas fa-exclamation-triangle", text: "<strong>Evitar:</strong> músicas muito lentas ou que 'puxem' atenção demais logo no início" }
-                ]
-            },
-            {
-                time: "21:45 – 22:05",
-                moment: "Quebra-gelo / Dinâmicas",
-                details: [
-                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> levantar a energia da galera e quebrar a timidez" },
-                    { icon: "fas fa-lightbulb", text: "<strong>Dica:</strong> baixar o volume durante as falas e subir nos desafios" }
-                ]
-            },
-            {
-                time: "22:05 – 22:30",
-                moment: "Amigo Secreto",
-                details: [
-                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> manter o clima leve e organizado" },
-                    { icon: "fas fa-exclamation-triangle", text: "<strong>Evitar:</strong> músicas que atrapalhem a escuta das apresentações" }
-                ]
-            },
-            {
-                time: "22:30 – 22:45",
-                moment: "Músicas",
-                details: [
-                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> direcionar o coração e criar unidade" },
-                    { icon: "fas fa-exclamation-triangle", text: "<strong>Atenção:</strong> respeitar o tempo para não cansar" }
-                ]
-            },
-            {
-                time: "22:45 – 23:00",
-                moment: "Palavra + Oração",
-                details: [
-                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> apoiar o momento sem distrair" },
-                    { icon: "fas fa-exclamation-triangle", text: "<strong>Evitar:</strong> qualquer som que roube atenção da fala" }
-                ]
-            },
-            {
-                time: "23:00 – 23:30",
-                moment: "Confraternização / Comida",
-                details: [
-                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> manter alegria e fluidez enquanto a galera se serve" },
-                    { icon: "fas fa-lightbulb", text: "<strong>Volume:</strong> confortável para conversa" }
-                ]
-            },
-            {
-                time: "23:30 – 23:50",
-                moment: "Preparação para a Virada",
-                details: [
-                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> preparar emocionalmente para o novo ano" },
-                    { icon: "fas fa-star", text: "<strong>Clima:</strong> de propósito e esperança" }
-                ]
-            },
-            {
-                time: "23:50 – 00:00",
-                moment: "Contagem Regressiva 🎆",
-                details: [
-                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> criar emoção e unidade" },
-                    { icon: "fas fa-fire", text: "<strong>Dica:</strong> reduzir tudo nos últimos 10 segundos e deixar só a galera contar" }
-                ]
-            },
-            {
-                time: "00:00 – 00:10",
-                moment: "Ano Novo 🎉",
-                details: [
-                    { icon: "fas fa-bullseye", text: "<strong>Objetivo:</strong> alegria coletiva e gratidão pela virada" }
-                ]
-            }
-        ];
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-info">
+                    <div class="footer-item">
+                        <i class="fas fa-calendar-day"></i>
+                        <h3>Horário da Virada</h3>
+                        <p> 31 de Dezembro -> 21:30 </p>
+                    </div>
+                    <div class="footer-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Local</h3>
+                        <p>Igreja Matriz - Lages de Pedra</p>
+                    </div>
+                    <div class="footer-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horário da Virada</h3>
+                        <p>31/12 - 21:00 até 01/01 - 02:00</p>
+                    </div>
+                </div>
 
-        // Dados das Etapas de Preparação
-        const preparationSteps = [
-            {
-                title: "Planejamento Estratégico",
-                icon: "fas fa-clipboard-check",
-                items: [
-                    "Tema oficial da Virada",
-                    "Aprovação do roteiro completo",
-                    "Definição dos responsáveis por cada momento",
-                    "Enquetes para validar ideias com o grupo",
-                    "Lista de materiais necessários",
-                    "Mensagem-base para WhatsApp",
-                    "Arte preliminar da programação"
-                ]
-            },
-            {
-                title: "Produção e Organização",
-                icon: "fas fa-tools",
-                items: [
-                    "Comprar/pegar todos os materiais",
-                    "Preparar perguntas e desafios para as dinâmicas",
-                    "Criar balões-surpresa (se aplicável)",
-                    "Separar ovos, corda, papéis, etc.",
-                    "Criar playlist oficial da virada",
-                    "Ensaiar abertura e Momento de Luz",
-                    "Organizar som, foto e recepção",
-                    "Montar tabela de pontuação para gincanas",
-                    "Arte final da programação para impressão"
-                ]
-            },
-            {
-                title: "Execução no Dia 31",
-                icon: "fas fa-play-circle",
-                items: [
-                    "Manhã: Conferir materiais, testar som e equipamentos",
-                    "Tarde: Montagem do espaço, encher balões",
-                    "Noite: Seguir cronograma, registrar fotos e vídeos",
-                    "Pós-evento: Agradecimentos e feedback"
-                ]
-            }
-        ];
+                <div class="update-info">
+                    <i class="fas fa-sync-alt"></i> Última atualização: <span id="current-date"></span>
+                </div>
+            </div>
+        </footer>
 
-        // Dados dos Materiais
-        const materials = [
-            { name: "Ovos para corrida", icon: "fas fa-egg", category: "Dinâmicas" },
-            { name: "Corda (cabo de guerra)", icon: "fas fa-rope", category: "Dinâmicas" },
-            { name: "Balões coloridos", icon: "fas fa-balloon", category: "Decoração" },
-            { name: "Papéis e canetas", icon: "fas fa-pen", category: "Geral" },
-            { name: "Caixa de som Bluetooth", icon: "fas fa-volume-up", category: "Som" },
-            { name: "Extensões e carregadores", icon: "fas fa-plug", category: "Elétrica" },
-            { name: "Mensagens impressas", icon: "fas fa-file-alt", category: "Material" },
-            { name: "Água e copos", icon: "fas fa-tint", category: "Alimentação" },
-            { name: "Prêmios simples", icon: "fas fa-gift", category: "Prêmios" },
-            { name: "Plaquinhas de pontuação", icon: "fas fa-chart-line", category: "Dinâmicas" }
-        ];
+        <script>
+            // Dados do Cronograma Musical
+            const musicSchedule = [
+                {
+                    time: "21:30 – 21:45",
+                    moment: "Chegada e Acolhida",
+                    details: [
+                        {
+                            icon: "fas fa-door-open",
+                            text: "<strong>O que acontece:</strong> Recepção dos jovens e  primeiras conversas. Momento de se encontrarem e se ambientarem."
+                        },
+                        {
+                            icon: "fas fa-users",
+                            text: "<strong>Atividades:</strong> Formação de grupos, apresentações iniciais e quebra-gelo simples enquanto todos chegam."
+                        }
+                    ]
+                },
+                {
+                    time: "21:45 – 22:05",
+                    moment: "Primeiras Dinâmicas",
+                    details: [
+                        {
+                            icon: "fas fa-gamepad",
+                            text: "<strong>O que acontece:</strong> Jogos e brincadeiras para integrar todo mundo. Dinâmicas divertidas para soltar a timidez."
+                        },
+                        {
+                            icon: "fas fa-laugh",
+                            text: "<strong>Atividades:</strong> Competições leves entre equipes, desafios em grupo e muita interação."
+                        }
+                    ]
+                },
+                {
+                    time: "22:05 – 22:30",
+                    moment: "Amigo Secreto",
+                    details: [
+                        {
+                            icon: "fas fa-gift",
+                            text: "<strong>O que acontece:</strong> Entrega dos presentes do amigo secreto. Cada pessoa revela para quem trouxe o presente."
+                        },
+                        {
+                            icon: "fas fa-heart",
+                            text: "<strong>Atividades:</strong> Explicação do significado dos presentes, abraços e fotos com os amigos secretos."
+                        }
+                    ]
+                },
+                {
+                    time: "22:30 – 22:45",
+                    moment: "Momento Espiritual",
+                    details: [
+                        {
+                            icon: "fas fa-pray",
+                            text: "<strong>O que acontece:</strong> Momento de oração e reflexão. Palavra inspiradora sobre o ano que passou e o que vem pela frente."
+                        },
+                        {
+                            icon: "fas fa-hands-praying",
+                            text: "<strong>Atividades:</strong> Oração coletiva, partilha de intenções e momento de silêncio reflexivo."
+                        }
+                    ]
+                },
+                {
+                    time: "22:45 – 23:00",
+                    moment: "Palavra e Mensagem",
+                    details: [
+                        {
+                            icon: "fas fa-book-open",
+                            text: "<strong>O que acontece:</strong> Reflexão sobre o significado da virada de ano na fé. Mensagem especial para os jovens."
+                        },
+                        {
+                            icon: "fas fa-cross",
+                            text: "<strong>Atividades:</strong> Leitura bíblica, partilha de testemunhos e oração final antes da ceia."
+                        }
+                    ]
+                },
+                {
+                    time: "23:00 – 23:30",
+                    moment: "Confraternização e Ceia",
+                    details: [
+                        {
+                            icon: "fas fa-utensils",
+                            text: "<strong>O que acontece:</strong> Todos se servem da comida e bebida. Momento de conversar, comer juntos e celebrar."
+                        },
+                        {
+                            icon: "fas fa-conversation",
+                            text: "<strong>Atividades:</strong> Fila para servir-se, mesas de conversa, fotos em grupo e ambiente descontraído."
+                        }
+                    ]
+                },
+                {
+                    time: "23:30 – 23:50",
+                    moment: "Preparação para a Virada",
+                    details: [
+                        {
+                            icon: "fas fa-clock",
+                            text: "<strong>O que acontece:</strong> Preparativos finais para a contagem regressiva. Reflexão sobre o que deixar no ano velho."
+                        },
+                        {
+                            icon: "fas fa-star",
+                            text: "<strong>Atividades:</strong> Distribuição de balões, preparação de surpresas e expectativa para a meia-noite."
+                        }
+                    ]
+                },
+                {
+                    time: "23:50 – 00:00",
+                    moment: "Contagem Regressiva",
+                    details: [
+                        {
+                            icon: "fas fa-fireworks",
+                            text: "<strong>O que acontece:</strong> Contagem dos últimos 10 segundos do ano. Todos juntos gritando a contagem."
+                        },
+                        {
+                            icon: "fas fa-champagne-glasses",
+                            text: "<strong>Atividades:</strong> Abraços, desejos de feliz ano novo, estouro de balões e celebração coletiva."
+                        }
+                    ]
+                },
+                {
+                    time: "00:00 – 00:10",
+                    moment: "Celebração do Ano Novo",
+                    details: [
+                        {
+                            icon: "fas fa-party-horn",
+                            text: "<strong>O que acontece:</strong> Primeiros momentos do ano novo. Alegria, abraços e celebração da chegada de 2026."
+                        },
+                        {
+                            icon: "fas fa-camera",
+                            text: "<strong>Atividades:</strong> Fotos do grupo, mensagens de gratidão, primeiras danças do ano e clima de festa."
+                        }
+                    ]
+                }
+            ];
 
-        // Dados da Equipe
-        const team = [
-            { role: "Condução geral", icon: "fas fa-user-tie", person: "A definir" },
-            { role: "Oração inicial", icon: "fas fa-pray", person: "A definir" },
-            { role: "Gincanas e dinâmicas", icon: "fas fa-gamepad", person: "A definir" },
-            { role: "Som e música", icon: "fas fa-music", person: "A definir" },
-            { role: "Fotos e vídeos", icon: "fas fa-camera", person: "A definir" },
-            { role: "Recepção e acolhida", icon: "fas fa-door-open", person: "A definir" },
-            { role: "Cronometragem", icon: "fas fa-stopwatch", person: "A definir" },
-            { role: "Organização do espaço", icon: "fas fa-th-large", person: "A definir" },
-            { role: "Equipe de apoio", icon: "fas fa-hands-helping", person: "Todos!" }
-        ];
+            // Dados das Etapas de Preparação
+            const preparationSteps = [
+                {
+                    title: "Planejamento Estratégico",
+                    icon: "fas fa-clipboard-check",
+                    items: [
+                        "Tema oficial da Virada",
+                        "Aprovação do roteiro completo",
+                        "Definição dos responsáveis por cada momento",
+                        "Enquetes para validar ideias com o grupo",
+                        "Lista de materiais necessários",
+                        "Mensagem-base para WhatsApp",
+                        "Arte preliminar da programação"
+                    ]
+                },
+                {
+                    title: "Produção e Organização",
+                    icon: "fas fa-tools",
+                    items: [
+                        "Comprar/pegar todos os materiais",
+                        "Preparar perguntas e desafios para as dinâmicas",
+                        "Criar balões-surpresa (se aplicável)",
+                        "Separar ovos, corda, papéis, etc.",
+                        "Criar playlist oficial da virada",
+                        "Ensaiar abertura e Momento de Luz",
+                        "Organizar som, foto e recepção",
+                        "Montar tabela de pontuação para gincanas",
+                        "Arte final da programação para impressão"
+                    ]
+                },
+                {
+                    title: "Execução no Dia 31",
+                    icon: "fas fa-play-circle",
+                    items: [
+                        "Manhã: Conferir materiais, testar som e equipamentos",
+                        "Tarde: Montagem do espaço, encher balões",
+                        "Noite: Seguir cronograma, registrar fotos e vídeos",
+                        "Pós-evento: Agradecimentos e feedback"
+                    ]
+                }
+            ];
 
-        // Dados das Pendências
-        const pendingDecisions = [
-            "Cores oficiais do evento",
-            "Arte final da programação",
-            "Responsáveis de cada dinâmica",
-            "Materiais faltantes para comprar",
-            "Ajustes finais no cronograma",
-            "Divisão final dos times",
-            "Música do Momento de Luz",
-            "Frase do encerramento"
-        ];
+            // Dados dos Materiais
+            const materials = [
+                { name: "Ovos para corrida", icon: "fas fa-egg", category: "Dinâmicas" },
+                { name: "Corda (cabo de guerra)", icon: "fas fa-rope", category: "Dinâmicas" },
+                { name: "Balões coloridos", icon: "fas fa-balloon", category: "Decoração" },
+                { name: "Papéis e canetas", icon: "fas fa-pen", category: "Geral" },
+                { name: "Caixa de som Bluetooth", icon: "fas fa-volume-up", category: "Som" },
+                { name: "Extensões e carregadores", icon: "fas fa-plug", category: "Elétrica" },
+                { name: "Mensagens impressas", icon: "fas fa-file-alt", category: "Material" },
+                { name: "Água e copos", icon: "fas fa-tint", category: "Alimentação" },
+                { name: "Prêmios simples", icon: "fas fa-gift", category: "Prêmios" },
+                { name: "Plaquinhas de pontuação", icon: "fas fa-chart-line", category: "Dinâmicas" }
+            ];
 
-        // Função para renderizar o cronograma musical
-        function renderMusicSchedule() {
-            const container = document.querySelector('.music-timeline');
-            container.innerHTML = '';
-            
-            musicSchedule.forEach((item, index) => {
-                const div = document.createElement('div');
-                div.className = 'music-item';
-                
-                let detailsHTML = '';
-                if (item.details && item.details.length > 0) {
-                    detailsHTML = `
+            // Dados da Equipe
+            const team = [
+                { role: "Condução geral", icon: "fas fa-user-tie", person: "A definir" },
+                { role: "Oração inicial", icon: "fas fa-pray", person: "A definir" },
+                { role: "Gincanas e dinâmicas", icon: "fas fa-gamepad", person: "A definir" },
+                { role: "Som e música", icon: "fas fa-music", person: "A definir" },
+                { role: "Fotos e vídeos", icon: "fas fa-camera", person: "A definir" },
+                { role: "Recepção e acolhida", icon: "fas fa-door-open", person: "A definir" },
+                { role: "Cronometragem", icon: "fas fa-stopwatch", person: "A definir" },
+                { role: "Organização do espaço", icon: "fas fa-th-large", person: "A definir" },
+                { role: "Equipe de apoio", icon: "fas fa-hands-helping", person: "Todos!" }
+            ];
+
+            // Dados das Pendências
+            const pendingDecisions = [
+                "Cores oficiais do evento",
+                "Arte final da programação",
+                "Responsáveis de cada dinâmica",
+                "Materiais faltantes para comprar",
+                "Ajustes finais no cronograma",
+                "Divisão final dos times",
+                "Música do Momento de Luz",
+                "Frase do encerramento"
+            ];
+
+            // Função para renderizar o cronograma musical
+            function renderMusicSchedule() {
+                const container = document.querySelector('.music-timeline');
+                container.innerHTML = '';
+
+                musicSchedule.forEach((item, index) => {
+                    const div = document.createElement('div');
+                    div.className = 'music-item';
+
+                    let detailsHTML = '';
+                    if (item.details && item.details.length > 0) {
+                        detailsHTML = `
                         <div class="music-details">
                             ${item.details.map(d => `
                                 <div class="detail-item">
@@ -898,30 +1012,30 @@
                             `).join('')}
                         </div>
                     `;
-                }
-                
-                div.innerHTML = `
+                    }
+
+                    div.innerHTML = `
                     <div class="music-time">
                         <i class="far fa-clock"></i> ${item.time}
                     </div>
                     <div class="music-moment">${item.moment}</div>
                     ${detailsHTML}
                 `;
-                
-                container.appendChild(div);
-            });
-        }
 
-        // Função para renderizar as etapas de preparação
-        function renderPreparationSteps() {
-            const container = document.querySelector('.preparation-steps');
-            container.innerHTML = '';
-            
-            preparationSteps.forEach(step => {
-                const div = document.createElement('div');
-                div.className = 'step-card';
-                
-                div.innerHTML = `
+                    container.appendChild(div);
+                });
+            }
+
+            // Função para renderizar as etapas de preparação
+            function renderPreparationSteps() {
+                const container = document.querySelector('.preparation-steps');
+                container.innerHTML = '';
+
+                preparationSteps.forEach(step => {
+                    const div = document.createElement('div');
+                    div.className = 'step-card';
+
+                    div.innerHTML = `
                     <h3><i class="${step.icon}"></i> ${step.title}</h3>
                     <ul class="step-list">
                         ${step.items.map(item => `
@@ -929,153 +1043,154 @@
                         `).join('')}
                     </ul>
                 `;
-                
-                container.appendChild(div);
-            });
-        }
 
-        // Função para renderizar materiais
-        function renderMaterials() {
-            const container = document.getElementById('materials-container');
-            container.innerHTML = '';
-            
-            materials.forEach(material => {
-                const div = document.createElement('div');
-                div.className = 'info-card';
-                
-                div.innerHTML = `
+                    container.appendChild(div);
+                });
+            }
+
+            // Função para renderizar materiais
+            function renderMaterials() {
+                const container = document.getElementById('materials-container');
+                container.innerHTML = '';
+
+                materials.forEach(material => {
+                    const div = document.createElement('div');
+                    div.className = 'info-card';
+
+                    div.innerHTML = `
                     <h3><i class="${material.icon}"></i> ${material.name}</h3>
                     <p style="margin-top: auto; color: #666; font-size: 0.9rem;">
                         <i class="fas fa-tag"></i> ${material.category}
                     </p>
                 `;
-                
-                container.appendChild(div);
-            });
-        }
 
-        // Função para renderizar equipe
-        function renderTeam() {
-            const container = document.getElementById('team-container');
-            container.innerHTML = '';
-            
-            team.forEach(member => {
-                const div = document.createElement('div');
-                div.className = 'info-card';
-                
-                div.innerHTML = `
+                    container.appendChild(div);
+                });
+            }
+
+            // Função para renderizar equipe
+            function renderTeam() {
+                const container = document.getElementById('team-container');
+                container.innerHTML = '';
+
+                team.forEach(member => {
+                    const div = document.createElement('div');
+                    div.className = 'info-card';
+
+                    div.innerHTML = `
                     <h3><i class="${member.icon}"></i> ${member.role}</h3>
                     <p style="margin-top: auto; font-weight: 500; color: var(--primary-color);">
                         ${member.person}
                     </p>
                 `;
-                
-                container.appendChild(div);
-            });
-        }
 
-        // Função para renderizar pendências
-        function renderPendingDecisions() {
-            const container = document.querySelector('#preparation-tab .info-cards');
-            if (!container) return;
-            
-            container.innerHTML = '';
-            
-            pendingDecisions.forEach(decision => {
-                const div = document.createElement('div');
-                div.className = 'info-card';
-                div.style.borderTop = '4px solid var(--warning-color)';
-                
-                div.innerHTML = `
+                    container.appendChild(div);
+                });
+            }
+
+            // Função para renderizar pendências
+            function renderPendingDecisions() {
+                const container = document.querySelector('#preparation-tab .info-cards');
+                if (!container) return;
+
+                container.innerHTML = '';
+
+                pendingDecisions.forEach(decision => {
+                    const div = document.createElement('div');
+                    div.className = 'info-card';
+                    div.style.borderTop = '4px solid var(--warning-color)';
+
+                    div.innerHTML = `
                     <h3><i class="fas fa-question"></i> ${decision}</h3>
                     <p style="margin-top: auto; color: #666; font-size: 0.9rem;">
                         <i class="fas fa-calendar-day"></i> Para definir no encontro de 21/12
                     </p>
                 `;
-                
-                container.appendChild(div);
-            });
-        }
 
-        // Inicializar tudo quando a página carregar
-        document.addEventListener('DOMContentLoaded', function() {
-            // Data atual
-            const now = new Date();
-            const options = { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' };
-            document.getElementById('current-date').textContent = now.toLocaleDateString('pt-BR', options) + ' ' + now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
-            
-            // Renderizar todos os componentes
-            renderMusicSchedule();
-            renderPreparationSteps();
-            renderMaterials();
-            renderTeam();
-            renderPendingDecisions();
-            
-            // Configurar navegação por abas
-            const tabBtns = document.querySelectorAll('.tab-btn');
-            const tabContents = document.querySelectorAll('.tab-content');
-            
-            tabBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Remover classe active de todos os botões e conteúdos
-                    tabBtns.forEach(b => b.classList.remove('active'));
-                    tabContents.forEach(c => c.classList.remove('active'));
-                    
-                    // Adicionar classe active ao botão clicado
-                    btn.classList.add('active');
-                    
-                    // Mostrar o conteúdo correspondente
-                    const tabId = btn.getAttribute('data-tab');
-                    document.getElementById(`${tabId}-tab`).classList.add('active');
+                    container.appendChild(div);
                 });
-            });
-            
-            // Configurar botão de compartilhar
-            document.getElementById('shareSchedule').addEventListener('click', () => {
-                if (navigator.share) {
-                    navigator.share({
-                        title: 'Cronograma Musical - Virada PJ 2026',
-                        text: 'Confira o cronograma musical da nossa virada de ano na PJ!',
-                        url: window.location.href
+            }
+
+            // Inicializar tudo quando a página carregar
+            document.addEventListener('DOMContentLoaded', function () {
+                // Data atual
+                const now = new Date();
+                const options = { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+                document.getElementById('current-date').textContent = now.toLocaleDateString('pt-BR', options) + ' ' + now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+
+                // Renderizar todos os componentes
+                renderMusicSchedule();
+                renderPreparationSteps();
+                renderMaterials();
+                renderTeam();
+                renderPendingDecisions();
+
+                // Configurar navegação por abas
+                const tabBtns = document.querySelectorAll('.tab-btn');
+                const tabContents = document.querySelectorAll('.tab-content');
+
+                tabBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        // Remover classe active de todos os botões e conteúdos
+                        tabBtns.forEach(b => b.classList.remove('active'));
+                        tabContents.forEach(c => c.classList.remove('active'));
+
+                        // Adicionar classe active ao botão clicado
+                        btn.classList.add('active');
+
+                        // Mostrar o conteúdo correspondente
+                        const tabId = btn.getAttribute('data-tab');
+                        document.getElementById(`${tabId}-tab`).classList.add('active');
                     });
-                } else {
-                    // Fallback para copiar link
-                    navigator.clipboard.writeText(window.location.href);
-                    alert('Link copiado para a área de transferência!');
-                }
-            });
-            
-            // Efeito de entrada suave
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.5s ease';
-            
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-            }, 100);
-            
-            // Adicionar observador de interseção para animações
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
+                });
+
+                // Configurar botão de compartilhar
+                document.getElementById('shareSchedule').addEventListener('click', () => {
+                    if (navigator.share) {
+                        navigator.share({
+                            title: 'Cronograma Musical - Virada PJ 2026',
+                            text: 'Confira o cronograma musical da nossa virada de ano na PJ!',
+                            url: window.location.href
+                        });
+                    } else {
+                        // Fallback para copiar link
+                        navigator.clipboard.writeText(window.location.href);
+                        alert('Link copiado para a área de transferência!');
                     }
                 });
-            }, observerOptions);
-            
-            // Observar todas as seções
-            document.querySelectorAll('.section').forEach(section => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(20px)';
-                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(section);
+
+                // Efeito de entrada suave
+                document.body.style.opacity = '0';
+                document.body.style.transition = 'opacity 0.5s ease';
+
+                setTimeout(() => {
+                    document.body.style.opacity = '1';
+                }, 100);
+
+                // Adicionar observador de interseção para animações
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, observerOptions);
+
+                // Observar todas as seções
+                document.querySelectorAll('.section').forEach(section => {
+                    section.style.opacity = '0';
+                    section.style.transform = 'translateY(20px)';
+                    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    observer.observe(section);
+                });
             });
-        });
-    </script>
+        </script>
 </body>
+
 </html>
